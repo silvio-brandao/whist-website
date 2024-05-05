@@ -21,10 +21,10 @@ jobs:
         go_version: ['1.18', '1.17', '>=1.18']
     steps:
     - uses: actions/checkout@v4
-    - name: Use Node.js 20.x
-      uses: actions/setup-node@v3
+    - name: Use Node.js ${{ matrix.go_version }}
+      uses: actions/setup-node@v4
       with:
-        node-version: 20.x
+        node-version: ${{ matrix.go_version }}
 
     - name: Set up Go
       uses: actions/setup-go@v4
