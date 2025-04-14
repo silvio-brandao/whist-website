@@ -17,9 +17,8 @@ if($_POST){
   $emailSubject = $subject . " by " . $name;
 
   /* HEADERS */
-  $headers = "From: $name <$email>\r\n" .
+  $headers = "From: $name <silviobrandao99@gmail.com>\r\n" .
              "Reply-To: $name <$email>\r\n" . 
-             "Subject: $emailSubject\r\n" .
              "Content-type: text/plain; charset=UTF-8\r\n" .
              "MIME-Version: 1.0\r\n" . 
              "X-Mailer: PHP/" . phpversion() . "\r\n";
@@ -31,13 +30,20 @@ if($_POST){
   }
 
   /* MESSAGE TEMPLATE */
-  $mailBody = "Name: $name \n\r" .
-              "Email:  $email \n\r" .
-              "Subject:  $subject \n\r" .
-//            "Phone:  $phone \n\r" .
-              "Message: $message";
+  $mailBody = "Name: $name\r\n" .
+            "Email: $email\r\n" .
+            "Subject: $subject\r\n" .
+            "Message: $message";
+
 
   /* SEND EMAIL */
   mail($recipient, $emailSubject, $mailBody, $headers);
+
+  if(mail($recipient, $emailSubject, $mailBody, $headers)) {
+    echo "Mensagem enviada com sucesso!";
+  } else {
+    echo "Erro ao enviar a mensagem.";
+  }
+  
 }
 ?>
