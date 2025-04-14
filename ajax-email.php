@@ -1,8 +1,8 @@
 <?php
 
 /* SETTINGS */
-$recipient = "your.email@gmail.com";
-$subject = "New Message from Contact Form";
+$recipient = "silviobrandao99@gmail.com";
+$subject = "WHIST - Orçamento";
 
 if($_POST){
 
