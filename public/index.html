@@ -385,10 +385,10 @@
       <div class="wrap">
       
         <div class="fix-6-12">
-          <h1 class="huge ae-1 margin-bottom-2">Entre em contato</h1>
-          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">Solicite seu orçamento</span></p>
+          <!-- <h1 class="huge ae-1 margin-bottom-2">Entre em contato</h1>
+          <p class="hero ae-2 margin-bottom-3"><span class="opacity-8">Solicite seu orçamento</span></p> -->
 
-          <form action="#" autocomplete="off" class="slides-form margin-bottom-3">
+          <!-- <form action="#" autocomplete="off" class="slides-form margin-bottom-3">
             <input type="text" class="ae-3" name="nome" placeholder="Nome"/>
             <input type="email" class="ae-3" name="email" placeholder="E-mail"/>
             <input type="tel" class="ae-3" name="telefone" placeholder="Telefone"/>
@@ -397,7 +397,27 @@
             <button type="submit" class="button btn-color gradient ae-4" name="submit" style="
               background: #08134e !important;
             ">Enviar</button>
+          </form> -->
+
+          <h1>Crie seu layout personalizado</h1>
+          <form id="design-form">
+            <label>Tipo de site:
+              <input class="ae-3" type="text" name="tipo" placeholder="Ex: portfólio, loja..." required>
+            </label><br>
+            <label>Estilo:
+              <input class="ae-3" type="text" name="estilo" placeholder="Ex: moderno, minimalista..." required>
+            </label><br>
+            <label>Cores preferidas:
+              <input class="ae-3" type="text" name="cores" placeholder="Ex: azul, branco..." required>
+            </label><br>
+            <button class="button btn-color gradient ae-4" type="submit">Gerar Design</button>
           </form>
+        
+          <pre id="resultado"></pre><br>
+
+          <!-- Iframe para renderizar o HTML gerado -->
+          <iframe id="preview" style="width:100%; height:400px;"></iframe>
+        
         </div>
                 
       </div>
@@ -414,6 +434,6 @@
 
 <!-- Loading Progress Bar -->
 <div class="progress-bar indigo"></div>
-		
+<script src="/js/script.js"></script>
 </body>
 </html>
